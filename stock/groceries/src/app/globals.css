@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Coiny&family=Lora:ital,wght@0,400..700;1,400..700&family=Suez+One&display=swap');
+@import "tailwindcss";
+
+
+/* font-family: "Suez One", serif; */
+/* font-family: "Coiny", system-ui; */
+/* font-family: "Caudex", serif; */
+/* font-family: "Lora", serif; */
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+
+
+
+.paragraph{
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+  color: var(--background);
+  margin-top: 1rem;
+  width: 320px;
+  text-align: justify;
+  font-family: "Caudex", system-ui !important;
+  font-weight: 400;
+  font-style: normal;
+}
