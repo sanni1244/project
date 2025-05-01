@@ -1,11 +1,10 @@
 import Image from "next/image";
+import HubPage from "./hub/page";
 
 export default function Home() {
   return (
     <div>
-      Hello World!
-
-
+      <HubPage/>
 
 
       {/* <p className="text-sm">🕒 Mon-Fri: 9 AM - 5 PM</p>

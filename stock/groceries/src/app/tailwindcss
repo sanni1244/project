@@ -1,0 +1,19 @@
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        cream: {
+          DEFAULT: '#FFFDD0',
+          light: '#FFFBEA',
+          beige: '#F5F5DC',
+          almond: '#EFDECD',
+          vanilla: '#F3E5AB',
+          custard: '#FDEAA8',
+          butter: '#FBE7A1',
+          blush: '#FADADD',
+        },
+      },
+    },
+  },
+}
