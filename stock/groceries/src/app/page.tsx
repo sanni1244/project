@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HubPage from "./hub/page";
+import HubPage from "./pages/home-prices/landingpage/page";
 
 export default function Home() {
   return (

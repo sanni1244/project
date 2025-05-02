@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "./footer/page";
-import Nav from "./nav/page";
+import Footer from "./components/footer/page";
+import Nav from "./components/nav/page";
 
 
 const geistSans = Geist({
@@ -45,6 +45,9 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff"></meta>
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta>
         <meta name="theme-color" content="#ffffff"></meta>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Coiny&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Domine:wght@400..700&family=Dosis:wght@200..800&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kameron:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Martel:wght@200;300;400;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Slabo+27px&family=Suez+One&family=Telex&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

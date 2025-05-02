@@ -20,14 +20,14 @@ export default function HeroSection() {
           </p>
           <a
             href="#features"
-            className="inline-block px-8 py-3 rounded-full bg-yellow-500 text-gray-800 text-lg font-semibold hover:bg-yellow-400 transition ease-in-out duration-300 mb-6"
+            className="inline-block px-8 py-3 rounded bg-green-600 text-white text-lg font-semibold hover:bg-green-400 transition ease-in-out duration-300 mb-6"
           >
             Get Started
           </a>
         </div>
-        
+         
         {/* Right Image */}
-        <div className="relative z-10 mt-8 lg:mt-0 lg:w-1/2">
+        <div className="flex justify-center items-center lg:mt-0 lg:w-1/2">
           <Image
           src={'/images/photo/items.png'}
           alt={'Several groceries on a table'}

@@ -34,7 +34,7 @@ const Footer = () => {
                         <button className="px-6 py-2 rounded-full bg-gray-100 text-gray-800 font-medium hover:bg-yellow-200 transition">
                             Login
                         </button>
-                        <button className="px-6 py-2 rounded-full bg-green-800 text-white font-medium hover:bg-gray-700 transition">
+                        <button className="px-6 py-2 rounded-full bg-green-600 text-white font-medium hover:bg-gray-700 transition">
                             Sign Up
                         </button>
                     </div>
