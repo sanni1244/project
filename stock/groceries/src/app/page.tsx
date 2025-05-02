@@ -1,10 +1,13 @@
 import Image from "next/image";
 import HubPage from "./pages/home-prices/landingpage/page";
+import Infosection from "./pages/home-prices/info/page";
+
 
 export default function Home() {
   return (
     <div>
       <HubPage/>
+      <Infosection/>  
 
 
       {/* <p className="text-sm">🕒 Mon-Fri: 9 AM - 5 PM</p>

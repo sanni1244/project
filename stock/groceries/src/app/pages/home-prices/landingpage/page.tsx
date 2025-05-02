@@ -29,9 +29,9 @@ export default function HeroSection() {
         {/* Right Image */}
         <div className="flex justify-center items-center lg:mt-0 lg:w-1/2">
           <Image
-          src={'/images/photo/items.png'}
+          src={'/images/photo/hero.png'}
           alt={'Several groceries on a table'}
-          width={400}
+          width={500}
           height={400}
           className="object-cover object-center"
           priority={true}
