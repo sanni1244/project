@@ -1,7 +1,9 @@
 // app/components/GroceryPriceSection.tsx
 'use client'
 
-import { useState } from 'react'
+import { useState } from 'react';
+import "./style.css";
+
 
 const categories = ['All', 'Food', 'Fruits', 'Vegetables', 'Dairy', 'Drinks', 'Snacks']
 

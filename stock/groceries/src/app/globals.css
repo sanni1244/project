@@ -23,10 +23,26 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --blackshade: rgb(59, 59, 59);
+  --greenshade: rgb(72, 177, 107);
+
 }
 
+.h1 {
+  font-size: 3rem;
+  color: var(--blackshade);
+  text-align: center;
+  font-family: "Caudex", serif;
+  font-weight: 800;
+}
 
-.paragraph{
+.p {
+  margin-top: 15px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 17px;
+}
+
+.paragraph {
   font-size: 0.8rem;
   line-height: 1.8rem;
   color: var(--background);

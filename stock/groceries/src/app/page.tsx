@@ -1,12 +1,15 @@
 import Image from "next/image";
-import HubPage from "./pages/home-prices/landingpage/page";
+import HubPage from "./pages/home-prices/heropage/page";
 import Infosection from "./pages/home-prices/info/page";
+import Stats from "./pages/home-prices/stats/page";
+
 
 
 export default function Home() {
   return (
     <div>
       <HubPage/>
+      <Stats/>  
       <Infosection/>  
 
 
