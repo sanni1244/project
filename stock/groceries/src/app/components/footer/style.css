@@ -1,4 +1,4 @@
-h3{
+footer h3{
     background-color: rgb(245, 238, 238) !important;
     color: black;
     padding: 0.1rem 0.3rem;
@@ -10,15 +10,17 @@ h3{
     cursor: default;
 }
 
-p{
+footer p{
     font-family: Lora;
     font-size: 0.8rem;
 }
-p:hover{
+footer p:hover{
     font-size: 0.78rem;
     color: rgb(192, 192, 192);
     transition: all 0.1s ease-in-out;
 }
-h3:hover{
+
+
+footer h3:hover{
     background-color: rgb(167, 162, 162) !important;
 }

@@ -1,7 +1,9 @@
 import Image from "next/image";
-import HubPage from "./pages/home-prices/heropage/page";
+import HubPage from "./pages/home-prices/section1/page";
 import Infosection from "./pages/home-prices/info/page";
-import Stats from "./pages/home-prices/stats/page";
+import Stats from "./pages/home-prices/section2/page";
+import Stats3 from "./pages/home-prices/section3/page";
+
 
 
 
@@ -10,8 +12,8 @@ export default function Home() {
     <div>
       <HubPage/>
       <Stats/>  
-      <Infosection/>  
-
+      <Stats3/>  
+      <Infosection/>   
 
       {/* <p className="text-sm">🕒 Mon-Fri: 9 AM - 5 PM</p>
       <p className="text-sm">📦 Free Shipping on orders over $50</p>
