@@ -27,35 +27,29 @@ const fadeIn = {
 }
 const stats = [
   {
-    label: "Local to Imported Ratio",
-    value: 72,
-    suffix: "%",
-    note: "Ratio of locally produced food vs imported in 2024"
-  },
-  {
-    label: "Food Wastage",
-    value: 4.8,
-    suffix: "M Tons",
-    note: "Estimated total food wastage in 2024"
-  },
-  {
-    label: "Agricultural GDP",
-    value: 18.3,
-    suffix: "%",
-    note: "Agriculture’s share of Nigeria’s GDP"
-  },
-  {
     label: "Agri-Budget Share",
-    value: 4.1,
+    value: 1.32,
     suffix: "%",
-    note: "Percentage of 2024 national budget allocated to agriculture"
+    note: "Percentage of the 2024 national budget allocated to agriculture."
   },
   {
-    label: "Net Agricultural Profit",
-    value: 12.6,
+    label: "Food Inflation Rate",
+    value: 39.93,
     suffix: "%",
-    note: "Profit margin from agricultural activities in 2024"
-  }
+    note: "Year-on-year food inflation as of recent years."
+  },
+  {
+    label: "Cassava production",
+    value: 59,
+    suffix: "M Tons",
+    note: "Nigeria are  the largest producers of Cassava in the world."
+  },
+  {
+    label: "Flood-Damaged Farmland (2024)",
+    value: 1.6,
+    suffix: "M Hect.",
+    note: "Crops destroyed by floods, exacerbating food shortages and inflation."
+  },
 ];
 
 
@@ -217,27 +211,21 @@ export default function AboutSection() {
 
 
 
-      <section className="bg-[#0f172a] py-20 px-6 text-white">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-green-400 to-lime-300 inline-block text-transparent bg-clip-text">
+      <section className="bg-[#0f172a] py-10 text-white">
+          <h2 className="h1 text-4xl font-extrabold mb-4 bg-gradient-to-r from-green-400 to-lime-300 inline-block text-transparent bg-clip-text">
             Nigeria Food Metrics 2024
           </h2>
-          <p className="text-gray-300 max-w-xl mx-auto">
-            Tracking the pulse of agriculture, economy, and sustainability in Nigeria.
-          </p>
-        </div>
-
-        <div ref={ref} className="flex flex-wrap justify-center gap-6 md:grid md:grid-cols-3 lg:grid-cols-5">
+        <div ref={ref} className="flex flex-wrap justify-center gap-6 md:grid md:grid-cols-3 lg:grid-cols-4  px-6 mt-10">
           {stats.map((stat, i) => (
             <div
               key={i}
               className="stat-card group"
             >
-              <div className="text-4xl font-bold tracking-wide text-green-300 group-hover:text-white transition-colors duration-300">
+              <div className="text-4xl font-bold tracking-wide text-green-300 group-hover:text-white transition-colors duration-300 h2">
                 {inView ? <CountUp end={stat.value} duration={2} decimals={stat.value % 1 !== 0 ? 1 : 0} suffix={stat.suffix} /> : "0"}
               </div>
-              <div className="text-lg font-semibold mt-2">{stat.label}</div>
-              <p className="text-gray-400 text-sm mt-1">{stat.note}</p>
+              <div className="text-lg font-semibold mt-2 h4">{stat.label}</div>
+              <p className="text-gray-400 text-sm mt-1 p">{stat.note}</p>
             </div>
           ))}
         </div>

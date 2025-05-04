@@ -36,30 +36,33 @@
   font-weight: 800;
 }
 
+.h2 {
+  font-size: 2.2rem;
+  color: var(--background);
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.h4 {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: silver;
+  text-align: center;
+  font-weight: 800;
+  font-family: "Dosis", sans-serif;
+font-family: "Domine", serif;
+}
+
+
+
+
 .h3 {
   font-size: 1.45rem;
-  color: var(--greenshade);
+  color: var(--background);
   text-align: center;
   font-family: "Caudex", serif;
   font-weight: 400;
   font-family: "Suez One", serif;
-/* font-family: "Coiny", system-ui; */
-/* font-family: "Caudex", serif; */
-/* font-family: "Lora", serif; */
-/* font-family: "Work Sans", sans-serif; */
-/* font-family: "Inknut Antiqua", serif; */
-/* font-family: "Cantarell", sans-serif; */
-/* font-family: "Cormorant", serif; */
-/* font-family: "Kameron", serif; */
-/* font-family: "Poppins", sans-serif; */
-/* font-family: "Roboto Mono", monospace; */
-/* font-family: "Telex", sans-serif; */
-/* font-family: "Josefin Sans", sans-serif; */
-/* font-family: "Nunito Sans", sans-serif; */
-/* font-family: "Martel", serif; */
-/* font-family: "Inknut Antiqua", serif; */
-/* font-family: "Dosis", sans-serif; */
-/* font-family: "Domine", serif; */
 }
 
 .p {
