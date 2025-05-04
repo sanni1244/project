@@ -37,12 +37,13 @@ const chartData = {
     {
       label: 'Oct 2024 Price (₦)',
       data: [2800, 1940, 5850, 1550, 2670],
-      backgroundColor: 'rgba(248, 40, 40, 0.6)',
+      backgroundColor: '#af3737',
       borderRadius: 1,
       barPercentage: 0.9,
     },
   ],
 }
+
 
 const piedata = {
   labels: ['Food', 'Other Expenses'],
@@ -50,7 +51,7 @@ const piedata = {
     {
       label: 'Household Spending (%)',
       data: [56.65, 43.35],
-      backgroundColor: ['#48b16b', '#E5E7EB'],
+      backgroundColor: ['#48b16b', '#af3737'],
       borderWidth: 1,
     },
   ],
@@ -58,14 +59,15 @@ const piedata = {
 
 export default function AboutSection() {
   return (
-    <section className="bg-white px-6 py-16 sm:px-10 md:px-20 lg:px-32 text-center space-y-16">
-
+    <section className="bg-white py-16  text-center space-y-16">
+      <div className='px-6 sm:px-10 md:px-20 lg:px-32'>
       <motion.div
         custom={1}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
+        className=''
       >
         <h1 className="h1">
           🥑 Welcome to <span style={{ color: '#48b16b' }}>Eco</span>Gracer
@@ -73,31 +75,7 @@ export default function AboutSection() {
         <p className="p">
           Your trusted source for fresh Nigerian groceries, delivered to your door. We bridge the gap between farm and home.
         </p>
-      </motion.div>
-
-      {/* Chart Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto"
-      >
-        {/* Pie Chart */}
-        <div className="bg-white p-6 rounded-xl shadow-lg h-90 flex flex-col justify-center items-center max-w-5xl mx-auto">
-          <h3 className="text-lg font-semibold text-indigo-700 mb-2">🍽 Household Spending (2024)</h3>
-          <p className="text-sm mb-4 text-gray-600">Nigerian's spent over 56% of their household income on food in 2024.</p>
-          <div style={{ width: '250px', height: '250px' }}> {/* Custom size */}
-            <Pie data={piedata} />
-          </div>
-        </div>
-        {/* Bar Chart */}
-        <div className="bg-white p-6 rounded-xl shadow-lg h-90">
-          <h2 className="text-lg font-semibold text-green-700 mb-2">
-            📊 Food inflation (2023 vs 2024)
-          </h2>
-          <Bar data={chartData} />
-        </div>
+        <br /><br />
       </motion.div>
 
       {/* Features */}
@@ -130,12 +108,12 @@ export default function AboutSection() {
           ))}
         </div>
       </motion.div>
-      {/* ghjkl;,jkhgjhjkl; */}
-      <div className="relative isolate overflow-hidden bg-[#e0eecf] py-24 px-6 md:px-12">
+      </div>
+      <div className="relative isolate overflow-hidden bg-[#48b16b] py-24 px-6 md:px-12">
         <div className="absolute inset-0 -z-10">
           <svg
             viewBox="0 0 1440 320"
-            className="w-full h-full fill-[#fdf7f0] scale-x-110"
+            className="w-full h-full fill-[#ffffff] scale-x-110"
             preserveAspectRatio="none"
           >
             <path d="M0,160 C360,260 1080,60 1440,160 L1440,320 L0,320 Z"></path>
@@ -154,14 +132,69 @@ export default function AboutSection() {
           </div>
 
           <div className="text-gray-800 space-y-10">
-            <h2 className="text-3xl md:text-4xl font-bold">What We’ve Rescued</h2>
-            <p className="text-lg leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">What We’ve Rescued</h2>
+            <p className="text-lg leading-relaxed p font-bold">
               First-of-the-season artichokes are typically “too big” for traditional grocery stores... but for us, the more we can rescue, the merrier.
               This means our grower gets a fair return on the harvest, and you get jumbo-sized ‘chokes for half their usual price.
             </p>
           </div>
         </div>
       </div>
+
+      {/* Chart Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto"
+      >
+        {/* Pie Chart */}
+        <div className="bg-white p-10 rounded-xl shadow-lg h-95 flex flex-col justify-center items-center max-w-5xl mx-auto">
+          <h3 className="text-lg font-semibold text-indigo-700 h3"> Household Spending (2024)</h3>
+          <p className="text-sm text-gray-600 p">Nigerian's spent over 56% of their household income on food in 2024.</p>
+          <div style={{ width: '250px', height: '250px' }}>
+            <Pie data={piedata} />
+          </div>
+        </div>
+        {/* Bar Chart */}
+        <div className="bg-white p-6 rounded-xl shadow-lg h-95">
+          <h2 className="text-lg font-semibold h3 mb-2">
+            📊 Food inflation (2023 vs 2024)
+          </h2>
+          <p className="text-sm text-gray-600 p">Big spike in food prices across the country over the past year</p>
+          <Bar data={chartData} />
+        </div>
+      </motion.div>
+
+      {/* other things */}
+
+      <main className="bg-[#dbe6c1] relative overflow-hidden py-16">
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-[#fbf6ef] rounded-t-[100%]"></div>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full max-w-sm">
+            <Image
+              src="/artichokes.png"
+              alt="Artichokes"
+              width={400}
+              height={400}
+              className="rounded-md"
+            />
+          </div>
+          <div className="text-center md:text-left max-w-xl">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              What We’ve Rescued
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              First-of-the season artichokes are typically “too big”d for traditional grocery
+              stores...but for us, the more we can rescue, the merrier. This means our grower
+              gets a fair return on the harvest, and you get jumbo-sized ‘chokes for half their
+              usual price.
+            </p>
+          </div>
+        </div>
+      </main>
+
     </section>
   )
 }
