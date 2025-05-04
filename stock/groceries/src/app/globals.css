@@ -23,14 +23,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --blackshade: rgb(59, 59, 59);
+  --blackshade: #3b3b3b;
   --greenshade: #48b16b;
   --redshade: #af3737;
 }
 
 .h1 {
   font-size: 3rem;
-  color: var(--blackshade);
+  /* color: var(--blackshade); */
   text-align: center;
   font-family: "Caudex", serif;
   font-weight: 800;

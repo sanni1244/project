@@ -13,6 +13,8 @@ import {
   Legend,
 } from 'chart.js'
 import { Bar, Pie } from 'react-chartjs-2'
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 ChartJS.register(CategoryScale, LinearScale, ArcElement, BarElement, Tooltip, Legend)
 
@@ -23,6 +25,39 @@ const fadeIn = {
     y: 0,
   }),
 }
+const stats = [
+  {
+    label: "Local to Imported Ratio",
+    value: 72,
+    suffix: "%",
+    note: "Ratio of locally produced food vs imported in 2024"
+  },
+  {
+    label: "Food Wastage",
+    value: 4.8,
+    suffix: "M Tons",
+    note: "Estimated total food wastage in 2024"
+  },
+  {
+    label: "Agricultural GDP",
+    value: 18.3,
+    suffix: "%",
+    note: "Agriculture’s share of Nigeria’s GDP"
+  },
+  {
+    label: "Agri-Budget Share",
+    value: 4.1,
+    suffix: "%",
+    note: "Percentage of 2024 national budget allocated to agriculture"
+  },
+  {
+    label: "Net Agricultural Profit",
+    value: 12.6,
+    suffix: "%",
+    note: "Profit margin from agricultural activities in 2024"
+  }
+];
+
 
 const chartData = {
   labels: ['Beans', 'Rice', 'Beef', 'Bread', 'Eggs(12pcs)'],
@@ -58,56 +93,61 @@ const piedata = {
 }
 
 export default function AboutSection() {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   return (
     <section className="bg-white py-16  text-center space-y-16">
       <div className='px-6 sm:px-10 md:px-20 lg:px-32'>
-      <motion.div
-        custom={1}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        className=''
-      >
-        <h1 className="h1">
-          🥑 Welcome to <span style={{ color: '#48b16b' }}>Eco</span>Gracer
-        </h1>
-        <p className="p">
-          Your trusted source for fresh Nigerian groceries, delivered to your door. We bridge the gap between farm and home.
-        </p>
-        <br /><br />
-      </motion.div>
+        <motion.div
+          custom={1}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className=''
+        >
+          <h1 className="h1 text-[#3b3b3b]">
+            🥑 Welcome to <span style={{ color: '#48b16b' }}>Eco</span>Gracer
+          </h1>
+          <p className="p">
+            Your trusted source for fresh Nigerian groceries, delivered to your door. We bridge the gap between farm and home.
+          </p>
+          <br /><br />
+        </motion.div>
 
-      {/* Features */}
-      <motion.div
-        custom={2}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-gray-700 text-left">
-          {[
-            { icon: '🛒', title: 'Fast Delivery', desc: 'Next-day delivery across major cities.' },
-            { icon: '🌾', title: 'Local Produce', desc: 'Fresh from Nigerian farms.' },
-            { icon: '💸', title: 'Affordable Prices', desc: 'Market-competitive and fair.' },
-            { icon: '📦', title: 'Bulk Orders', desc: 'Wholesale options available.' },
-          ].map((item, i) => (
-            <motion.div
-              key={item.title}
-              className="bg-green-50 p-6 rounded-2xl shadow transform transition duration-1000"
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <div className="text-3xl mb-2">{item.icon}</div>
-              <p className="p text-xl font-semibold">{item.title}</p>
-              <p className="mt-2 text-sm">{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+        {/* Features */}
+        <motion.div
+          custom={2}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-gray-700 text-left">
+            {[
+              { icon: '🛒', title: 'Fast Delivery', desc: 'Next-day delivery across major cities.' },
+              { icon: '🌾', title: 'Local Produce', desc: 'Fresh from Nigerian farms.' },
+              { icon: '💸', title: 'Affordable Prices', desc: 'Market-competitive and fair.' },
+              { icon: '📦', title: 'Bulk Orders', desc: 'Wholesale options available.' },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                className="bg-green-50 p-6 rounded-2xl shadow transform transition duration-1000"
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl mb-2">{item.icon}</div>
+                <p className="p text-xl font-semibold">{item.title}</p>
+                <p className="mt-2 text-sm">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+
+
+
       </div>
       <div className="relative isolate overflow-hidden bg-[#48b16b] py-24 px-6 md:px-12">
         <div className="absolute inset-0 -z-10">
@@ -120,6 +160,10 @@ export default function AboutSection() {
           </svg>
         </div>
 
+
+
+
+
         <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-8">
           <div className="p-5 overflow-hidden rounded-xl shadow-xl flex justify-center items-center">
             <Image
@@ -131,9 +175,11 @@ export default function AboutSection() {
             />
           </div>
 
+
+
           <div className="text-gray-800 space-y-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">What We’ve Rescued</h2>
-            <p className="text-lg leading-relaxed p font-bold">
+            <h2 className="text-3xl md:text-4xl text-white h1 text-white text-red-300 ">What We’ve Rescued</h2>
+            <p className="text-lg leading-relaxed p">
               First-of-the-season artichokes are typically “too big” for traditional grocery stores... but for us, the more we can rescue, the merrier.
               This means our grower gets a fair return on the harvest, and you get jumbo-sized ‘chokes for half their usual price.
             </p>
@@ -166,6 +212,40 @@ export default function AboutSection() {
           <Bar data={chartData} />
         </div>
       </motion.div>
+
+
+
+
+
+      <section className="bg-[#0f172a] py-20 px-6 text-white">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-green-400 to-lime-300 inline-block text-transparent bg-clip-text">
+            Nigeria Food Metrics 2024
+          </h2>
+          <p className="text-gray-300 max-w-xl mx-auto">
+            Tracking the pulse of agriculture, economy, and sustainability in Nigeria.
+          </p>
+        </div>
+
+        <div ref={ref} className="flex flex-wrap justify-center gap-6 md:grid md:grid-cols-3 lg:grid-cols-5">
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className="stat-card group"
+            >
+              <div className="text-4xl font-bold tracking-wide text-green-300 group-hover:text-white transition-colors duration-300">
+                {inView ? <CountUp end={stat.value} duration={2} decimals={stat.value % 1 !== 0 ? 1 : 0} suffix={stat.suffix} /> : "0"}
+              </div>
+              <div className="text-lg font-semibold mt-2">{stat.label}</div>
+              <p className="text-gray-400 text-sm mt-1">{stat.note}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+
+
 
       {/* other things */}
 
