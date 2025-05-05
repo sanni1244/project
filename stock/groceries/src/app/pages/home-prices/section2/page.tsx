@@ -255,9 +255,7 @@ export default function AboutSection() {
             </h2>
             <p className="text-gray-700 leading-relaxed">
               First-of-the season artichokes are typically “too big”d for traditional grocery
-              stores...but for us, the more we can rescue, the merrier. This means our grower
-              gets a fair return on the harvest, and you get jumbo-sized ‘chokes for half their
-              usual price.
+              stores but for us, the more we can rescue, the merrier. 
             </p>
           </div>
         </div>
